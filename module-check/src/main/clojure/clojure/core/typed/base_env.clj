@@ -740,6 +740,8 @@ clojure.string/trim [String -> String]
 clojure.string/trimr [String -> String]
 clojure.string/triml [String -> String]
 
+clojure.template/apply-template [ (t/HVec [t/Any *]) (t/HVec [t/Any *])(t/List t/Any ) -> (t/HVec [t/Any *])]
+clojure.template/do-template [ (t/HVec [t/Any *]) (t/HVec [t/Any *]) (t/AnyValue * ) -> (t/HVec [t/Any *])]
 
 
 clojure.core/interpose (All [x] (IFn [x (Option (Seqable x)) -> (ASeq x)]))

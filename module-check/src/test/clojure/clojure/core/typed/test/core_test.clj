@@ -1,8 +1,7 @@
 (ns test.core-test
- (:use clojure.test)
- (:require [clojure.core.typed :as t])
- (:require test.core) 
-)
+(:require [clojure.core.typed :as t]
+                [clojure.test :refer :all]
+                [test.core]))
 
-(deftest template-test
-  (is (t/check-ns 'test.template)))
+(deftest check-test
+  (is (t/check-ns 'test.check)))

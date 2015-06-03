@@ -9,4 +9,5 @@
 
 (deftest check-test
   (is-tc-e (apply-template '[a b c d e] '[d a b e c e b a d] '(1 2 3 4 5)) (t/Any))
+  (is-tc-e (clojure.template/do-template [x y] (+ y x) 2 4 3 5) (t/List t/Any))
 )

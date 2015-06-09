@@ -16,8 +16,8 @@
 
 
 (deftest doTemplate-test
-	(is-tc-e (clojure.template/do-template [x y] (+ y x) 2 4 3 5) t/Any)
-	(is-tc-e (clojure.template/do-template [x y] (* (+ x y) (- x y) ) 8 3) t/Any)
+	(is-tc-e   (clojure.template/do-template [x y] (+ y x) 2 4 3 5) t/Any)
+	(is-tc-e   (clojure.template/do-template [x y] (* (+ x y) (- x y) ) 8 3) t/Any)
 	(is-tc-err (clojure.template/do-template [x y] (+ y x) 2 4 3 5) (t/Vec t/Any))
 	(is-tc-err (clojure.template/do-template [x y] (+ y x) 2 4 3 5) (t/HVec t/Any))
 	(is-tc-err (clojure.template/do-template [x y] (+ y x) 2 4 3 5) (t/List t/Any)))

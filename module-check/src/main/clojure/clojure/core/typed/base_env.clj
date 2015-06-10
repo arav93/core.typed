@@ -740,8 +740,7 @@ clojure.string/trim [String -> String]
 clojure.string/trimr [String -> String]
 clojure.string/triml [String -> String]
 
-clojure.template/apply-template [ (t/Vec t/Any ) t/Any (t/List t/Any ) -> t/Any ]
-clojure.template/do-template [ (t/Vec t/Any ) t/Any (t/AnyValue * ) -> t/Any ]
+clojure.template/apply-template [(Vec Any) Any (List Any ) -> Any ]
 
 
 

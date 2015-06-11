@@ -1450,7 +1450,7 @@ clojure.set/superset? [(Set Any) (Set Any) -> Boolean]
 clojure.set/join [(Set (Map Any Any)) (Set (Map Any Any)) -> (Set (Map Any Any))]
 clojure.set/index [(Set (Map Any Any)) (Vec Any) -> (Map (Map Any Any) (Set (Map Any Any)))]
 clojure.set/map-invert (All [a b] [(Map a b) -> (Map b a)])
-clojure.set/project [(Set Any) (Vec Any) -> (Set Any)]
+clojure.set/project [(Set (Map Any Any)) (Vec Any) -> (Set (Map Any Any))]
 
 clojure.repl/pst (IFn [-> nil]
                       [(U Int Throwable) -> nil]

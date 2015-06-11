@@ -742,12 +742,7 @@ clojure.string/triml [String -> String]
 
 clojure.template/apply-template [(Vec Any) Any (List Any) -> Any]
 
-clojure.set/subset?[(Set Any) (Set Any)  -> Boolean]
-clojure.set/superset? [(Set Any) (Set Any)  -> Boolean]
-clojure.set/join [(Set Any) (Set Any)  -> (Set Any)]
-clojure.set/index [(Set Any) (Vec Any)  -> (Map Any Any)]
-clojure.set/map-invert [(Map Any Any)  -> (Map Any Any)]
-clojure.set/project [(Set Any) (Vec Any) -> (Set Any)]
+
 
 
 clojure.core/interpose (All [x] (IFn [x (Option (Seqable x)) -> (ASeq x)]))

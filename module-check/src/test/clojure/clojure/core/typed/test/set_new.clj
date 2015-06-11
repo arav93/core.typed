@@ -28,4 +28,8 @@
  (is-tc-err (index #{ {:a 1 :b 2} {:a 3 :b 4} {:a 1 :b 5} {:a 2 :b 6} } [:a]) (t/Vec t/Any) 
 	:requires [[clojure.set :refer [index]]]))
 	
-	
+(deftest MapInvert-test
+ (is-tc-e (map-invert {:a 1, :b 2}) (t/Map t/Any t/Any)
+	:requires [[clojure.set :refer [map-invert]]])
+ (is-tc-err (map-invert {:a 1, :b 2}) (t/Vec t/Any) 
+	:requires [[clojure.set :refer [map-invert]]]))

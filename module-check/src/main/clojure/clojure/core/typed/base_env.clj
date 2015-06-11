@@ -1445,11 +1445,11 @@ clojure.set/union (All [x] [(Set x) * -> (Set x)])
 clojure.set/intersection (All [x] [(Set x) (Set x) * -> (Set x)])
 
 clojure.set/difference (All [x] [(Set x) (Set Any) * -> (Set x)])
-clojure.set/subset?[(Set Any) (Set Any)  -> Boolean]
-clojure.set/superset? [(Set Any) (Set Any)  -> Boolean]
-clojure.set/join [(Set Any) (Set Any)  -> (Set Any)]
-clojure.set/index [(Set Any) (Vec Any)  -> (Map Any Any)]
-clojure.set/map-invert [(Map Any Any)  -> (Map Any Any)]
+clojure.set/subset? [(Set Any) (Set Any) -> Boolean]
+clojure.set/superset? [(Set Any) (Set Any) -> Boolean]
+clojure.set/join [(Set (Map Any Any)) (Set (Map Any Any)) -> (Set (Map Any Any))]
+clojure.set/index [(Set (Map Any Any)) (Vec Any) -> (Map (Map Any Any) (Set (Map Any Any)))]
+clojure.set/map-invert (All [a b] [(Map a b) -> (Map b a)])
 clojure.set/project [(Set Any) (Vec Any) -> (Set Any)]
 
 clojure.repl/pst (IFn [-> nil]

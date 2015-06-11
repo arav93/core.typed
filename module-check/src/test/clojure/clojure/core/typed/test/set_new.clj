@@ -33,3 +33,9 @@
 	:requires [[clojure.set :refer [map-invert]]])
  (is-tc-err (map-invert {:a 1, :b 2}) (t/Vec t/Any) 
 	:requires [[clojure.set :refer [map-invert]]]))
+
+(deftest project-test
+ (is-tc-e (project #{  {:a "b" :c 1} {:a "d" :c 2} } [:a]) (t/Set (t/Map t/Any t/Any))
+	:requires [[clojure.set :refer [project]]])
+ (is-tc-err (project #{  {:a "b" :c 1} {:a "d" :c 2} } [:a]) (t/Map t/Any t/Any) 
+	:requires [[clojure.set :refer [project]]]))

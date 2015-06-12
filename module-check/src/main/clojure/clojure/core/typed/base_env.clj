@@ -1449,6 +1449,11 @@ clojure.repl/pst (IFn [-> nil]
                       [(U Int Throwable) -> nil]
                       [Throwable Int -> nil])
   )
+
+clojure.repl/apropos [String -> (clojure.lang.LazySeq String)]
+clojure.repl/demunge [String -> String]
+clojure.repl/source-fn [clojure.lang.Symbol -> String]
+
     {'clojure.core/count (count-type)
      'clojure.core/aset-boolean (aset-*-type 'boolean)
      'clojure.core/aset-byte (aset-*-type 'byte)

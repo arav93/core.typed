@@ -38,4 +38,6 @@
  (is-tc-e (project #{  {:a "b" :c 1} {:a "d" :c 2} } [:a]) (t/Set (t/Map t/Any t/Any))
 	:requires [[clojure.set :refer [project]]])
  (is-tc-err (project #{  {:a "b" :c 1} {:a "d" :c 2} } [:a]) (t/Map t/Any t/Any) 
+	:requires [[clojure.set :refer [project]]])
+ (is-tc-err (project '(1 2 3) '(1)) (t/Set (t/Map t/Any t/Any))
 	:requires [[clojure.set :refer [project]]]))

@@ -41,3 +41,11 @@
 	:requires [[clojure.set :refer [project]]])
  (is-tc-err (project '(1 2 3) '(1)) (t/Set (t/Map t/Any t/Any))
 	:requires [[clojure.set :refer [project]]]))
+
+(deftest rename-test
+ (is-tc-e (rename #{  {:a 1, :b 1}  {:a 2, :b 2} } {:a :new-a}) (t/Set t/Any)
+	:requires [[clojure.set :refer [rename]]])
+ (is-tc-err (rename #{  {:a 1, :b 1}  {:a 2, :b 2} } {:a :new-a}) (t/Vec t/Any) 
+	:requires [[clojure.set :refer [rename]]])
+ (is-tc-err (rename #{  {:a 1, :b 1}  {:a 2, :b 2} } '(a new-a)) (t/Set t/Any) 
+	:requires [[clojure.set :refer [rename]]]))

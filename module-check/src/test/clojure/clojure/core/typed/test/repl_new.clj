@@ -5,9 +5,9 @@
             [clojure.core.typed.test.test-utils :refer :all]))
 
 (deftest apropos-test
-  (is-tc-e (apropos "clojure") t/Str
-           :requires [[clojure.repl :refer [apropos]]])
-  (is-tc-err (apropos "clojure") (t/Vec t/Any) 
+  (is-tc-e (apropos "clojure") (clojure.lang.LazySeq String)        
+             :requires [[clojure.repl :refer [apropos]]])
+  (is-tc-err (apropos "clojure") t/Str 
              :requires [[clojure.repl :refer [apropos]]])
   (is-tc-err (apropos 'clojure) t/Str 
              :requires [[clojure.repl :refer [apropos]]]))

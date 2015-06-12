@@ -49,3 +49,12 @@
 	:requires [[clojure.set :refer [rename]]])
  (is-tc-err (rename #{  {:a 1, :b 1}  {:a 2, :b 2} } '(a new-a)) (t/Set t/Any) 
 	:requires [[clojure.set :refer [rename]]]))
+
+
+(deftest renameKeys-test
+ (is-tc-e (rename-keys {:a 1, :b 2} {:a :new-a, :b :new-b}) (t/Map t/Any t/Any)
+	:requires [[clojure.set :refer [rename-keys]]])
+ (is-tc-err (rename-keys {:a 1, :b 2} {:a :new-a, :b :new-b}) (t/Vec t/Any) 
+	:requires [[clojure.set :refer [rename-keys]]])
+ (is-tc-err (rename-keys {:a 1, :b 2} '(a new-a)) (t/Map t/Any t/Any) 
+	:requires [[clojure.set :refer [rename-keys]]]))

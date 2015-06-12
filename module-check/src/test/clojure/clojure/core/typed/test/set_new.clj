@@ -58,3 +58,11 @@
 	:requires [[clojure.set :refer [rename-keys]]])
  (is-tc-err (rename-keys {:a 1, :b 2} '(a new-a)) (t/Map t/Any t/Any) 
 	:requires [[clojure.set :refer [rename-keys]]]))
+
+(deftest select-test
+ (is-tc-e (select odd? #{1 2 3} ) (t/Set t/Any)
+	:requires [[clojure.set :refer [select]]])
+ (is-tc-err (select odd? #{1 2 3} ) (t/Vec t/Any) 
+	:requires [[clojure.set :refer [select]]])
+ (is-tc-err (select odd? '[1 2 3] ) (t/Set t/Any) 
+	:requires [[clojure.set :refer [select]]]))

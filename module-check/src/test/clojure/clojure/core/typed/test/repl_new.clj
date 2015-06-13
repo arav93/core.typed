@@ -1,15 +1,14 @@
-(ns clojure.core.typed.test.set_new
+(ns clojure.core.typed.test.repl_new
   (:require [clojure.core.typed :as t]
-            [clojure.set :as set] 
             [clojure.test :refer :all]                
             [clojure.core.typed.test.test-utils :refer :all]))
 
 (deftest apropos-test
-  (is-tc-e (apropos "clojure") (clojure.lang.LazySeq String)        
+  (is-tc-e (apropos "clojure") (t/Seq t/Str)        
              :requires [[clojure.repl :refer [apropos]]])
   (is-tc-err (apropos "clojure") t/Str 
              :requires [[clojure.repl :refer [apropos]]])
-  (is-tc-err (apropos 'clojure) t/Str 
+  (is-tc-err (apropos 'clojure) (t/Seq t/Str) 
              :requires [[clojure.repl :refer [apropos]]]))
              
 (deftest demunge-test

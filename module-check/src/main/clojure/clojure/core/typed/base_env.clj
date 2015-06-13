@@ -1445,7 +1445,7 @@ clojure.set/union (All [x] [(Set x) * -> (Set x)])
 clojure.set/intersection (All [x] [(Set x) (Set x) * -> (Set x)])
 clojure.set/difference (All [x] [(Set x) (Set Any) * -> (Set x)])
 
-clojure.repl/apropos [String -> (clojure.lang.LazySeq String)]
+clojure.repl/apropos [String -> (Seq String)]
 clojure.repl/demunge [String -> String]
 clojure.repl/source-fn [clojure.lang.Symbol -> String]
 

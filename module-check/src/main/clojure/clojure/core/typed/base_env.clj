@@ -1447,7 +1447,7 @@ clojure.set/difference (All [x] [(Set x) (Set Any) * -> (Set x)])
 
 clojure.repl/apropos [String -> (U (Seq String) nil)]
 clojure.repl/demunge [String -> String]
-clojure.repl/source-fn [clojure.lang.Symbol -> String]
+clojure.repl/source-fn [clojure.lang.Symbol ->(U (Seq String) nil]
 
 clojure.repl/pst (IFn [-> nil]
                       [(U Int Throwable) -> nil]

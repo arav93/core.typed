@@ -10,4 +10,19 @@
              :requires [[clojure.instant :refer [read-instant-date]]])
    (is-tc-err   (read-instant-date 201404231013) String
              :requires [[clojure.instant :refer [read-instant-date]]]))
-  
+           
+(deftest read-instant-calendar-test
+  (is-tc-e   (read-instant-calendar "2014-04-23T10:13Z") java.util.GregorianCalendar             
+             :requires [[clojure.instant :refer [read-instant-calendar]]])
+  (is-tc-err   (read-instant-calendar "2014-04-23T10:13Z") String
+            :requires [[clojure.instant :refer [read-instant-calendar]]])
+  (is-tc-err   (read-instant-calendar 201404231013) java.util.GregorianCalendar
+            :requires [[clojure.instant :refer [read-instant-calendar]]]))
+
+(deftest read-instant-timestamp-test
+  (is-tc-e   (read-instant-timestamp "2014-04-23T10:13Z") java.sql.Timestamp             
+            :requires [[clojure.instant :refer [read-instant-timestamp]]])
+  (is-tc-err   (read-instant-timestamp "2014-04-23T10:13Z") String
+            :requires [[clojure.instant :refer [read-instant-timestamp]]])
+ (is-tc-err   (read-instant-timestamp 201404231013) java.sql.Timestamp            
+            :requires [[clojure.instant :refer [read-instant-timestamp]]])) 

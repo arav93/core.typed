@@ -9,5 +9,5 @@
              :requires [[clojure.data :refer [diff]]]) 
   (is-tc-err   (diff '[1 2 3] '[1 2]) (t/List t/Any )
              :requires [[clojure.data :refer [diff]]])
-  (is-tc-e   (diff '(1 2 3) '(1 2)) (t/HVec [t/Any *] )
+  (is-tc-err   (diff '(1 2 3) '(1 2)) (t/HVec [t/Any *] )
              :requires [[clojure.data :refer [diff]]])

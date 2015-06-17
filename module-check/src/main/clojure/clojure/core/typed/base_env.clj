@@ -740,7 +740,9 @@ clojure.string/trim [String -> String]
 clojure.string/trimr [String -> String]
 clojure.string/triml [String -> String]
 
-
+clojure.instant/read-instant-date [String -> java.util.Date]
+clojure.instant/read-instant-calendar [String -> java.util.GregorianCalendar]
+clojure.instant/read-instant-timestamp [String -> java.sql.Timestamp]
 
 clojure.core/interpose (All [x] (IFn [x (Option (Seqable x)) -> (ASeq x)]))
 clojure.core/interleave (All [x] [(Option (Seqable x)) (Option (Seqable x)) (Option (Seqable x)) * -> (ASeq x)])

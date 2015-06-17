@@ -8,7 +8,7 @@
              :requires [[clojure.instant :refer [read-instant-date]]])
   (is-tc-err   (read-instant-date "2014-04-23T10:13Z") String
              :requires [[clojure.instant :refer [read-instant-date]]])
-   (is-tc-err   (read-instant-date 201404231013) java.util.Date
+  (is-tc-err   (read-instant-date 201404231013) java.util.Date
              :requires [[clojure.instant :refer [read-instant-date]]]))
            
 (deftest read-instant-calendar-test
@@ -24,5 +24,5 @@
             :requires [[clojure.instant :refer [read-instant-timestamp]]])
   (is-tc-err   (read-instant-timestamp "2014-04-23T10:13Z") String
             :requires [[clojure.instant :refer [read-instant-timestamp]]])
- (is-tc-err   (read-instant-timestamp 201404231013) java.sql.Timestamp            
+  (is-tc-err   (read-instant-timestamp 201404231013) java.sql.Timestamp            
             :requires [[clojure.instant :refer [read-instant-timestamp]]])) 

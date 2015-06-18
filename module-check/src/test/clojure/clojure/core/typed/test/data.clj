@@ -5,9 +5,7 @@
              [clojure.core.typed.test.test-utils :refer :all]))
 
 (deftest diff-test
-  (is-tc-e   (diff '[1 2 3] '[1 2]) (U (Vec [Any *] ) (Seq Any))
+  (is-tc-e   (diff '[1 2 3] '[1 2]) (U (Vec [Any *] ) (U (Vec [Any *] ) (Seq Any)))
              :requires [[clojure.data :refer [diff]]]) 
   (is-tc-err   (diff '[1 2 3] '[1 2]) (t/List t/Any )
-             :requires [[clojure.data :refer [diff]]])
-  (is-tc-err   (diff '(1 2 3) '(1 2)) (U (Vec [Any *] ) (Seq Any))
-             :requires [[clojure.data :refer [diff]]])
+             :requires [[clojure.data :refer [diff]]]))

@@ -4,7 +4,7 @@
              [clojure.core.typed.test.test-utils :refer :all]))
 
 (deftest runTest-test
-  (is-tc-e   #(run-tests) (t/Map t/Any t/Any)
+  (is-tc-e  (run-tests) (t/Map t/Any t/Any)
              :requires [[clojure.test :refer [run-tests]]]))
 
 

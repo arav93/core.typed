@@ -1568,7 +1568,17 @@ clojure.pprint/pprint (IFn [Any -> nil]
   this-ns
 clojure.set/union (All [x] [(Set x) * -> (Set x)])
 clojure.set/intersection (All [x] [(Set x) (Set x) * -> (Set x)])
+
 clojure.set/difference (All [x] [(Set x) (Set Any) * -> (Set x)])
+clojure.set/subset? [(Set Any) (Set Any) -> Boolean]
+clojure.set/superset? [(Set Any) (Set Any) -> Boolean]
+clojure.set/join [(Set (Map Any Any)) (Set (Map Any Any)) -> (Set (Map Any Any))]
+clojure.set/index [(Set (Map Any Any)) (Vec Any) -> (Map (Map Any Any) (Set (Map Any Any)))]
+clojure.set/map-invert (All [a b] [(Map a b) -> (Map b a)])
+clojure.set/project [(Set (Map Any Any)) (Vec Any) -> (Set (Map Any Any))]
+clojure.set/rename [(Set Any) (Map Any Any) -> (Set Any)]
+clojure.set/rename-keys [(Map Any Any) (Map Any Any) -> (Map Any Any)]
+clojure.set/select [ (IFn [AnyInteger -> java.lang.Boolean]) (Set Any) -> (Set Any)]
 
 clojure.repl/pst (IFn [-> nil]
                       [(U Int Throwable) -> nil]

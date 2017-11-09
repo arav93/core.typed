@@ -1570,6 +1570,8 @@ clojure.set/union (All [x] [(Set x) * -> (Set x)])
 clojure.set/intersection (All [x] [(Set x) (Set x) * -> (Set x)])
 clojure.set/difference (All [x] [(Set x) (Set Any) * -> (Set x)])
 
+ clojure.data/diff [Any Any -> '[Any Any Any]]
+
 clojure.repl/pst (IFn [-> nil]
                       [(U Int Throwable) -> nil]
                       [Throwable Int -> nil])
